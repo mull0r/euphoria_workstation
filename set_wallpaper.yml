@@ -4,13 +4,6 @@
   become_user: mark
 
   tasks:
-  - name: Kopieer wallpaper file
-    copy:
-      src: files/wallpaper.png
-      dest: /usr/share/backgrounds/euphoria-wallpaper.png
-      owner: root
-      group: root
-
   - name: Wallpaper instellen
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
