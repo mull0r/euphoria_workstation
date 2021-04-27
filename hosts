@@ -1,0 +1,12 @@
+# Example inventory that makes an alias for localhost that uses Python3
+localhost-py3 ansible_host=localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python3
+
+# Example of setting a group of hosts to use Python3
+[py3-hosts]
+HVN1
+HVN2
+LWD1
+Mark-Ubuntu-VM-Laptop
+
+[py3-hosts:vars]
+ansible_python_interpreter=/usr/bin/python3
