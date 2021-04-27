@@ -1,5 +1,9 @@
+---
 - hosts: localhost
+  connection: local
   become: true
+
   tasks:
   - name: Installeer htop
-    apt: name=htop
+    package:
+      name: htop
