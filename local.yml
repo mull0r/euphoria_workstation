@@ -8,6 +8,8 @@
     package:
       name:
         - python3-psutil
+        - git
+        - landscape-client
         - htop
         - lm-sensors
         - neofetch
@@ -48,7 +50,8 @@
       owner: root
       group: root
       mode: 0440
-      
+
+# Naam van de cronjob NIET veranderen      
   - name: Ansible-pull cron job
     cron: 
       name: Ansible automatiseren
