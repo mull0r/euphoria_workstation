@@ -4,7 +4,7 @@
   become: true
 
   tasks:
-  - name: Installeer meerdere apt
+  - name: Installeer packages
     package:
       name:
         - htop
@@ -15,10 +15,3 @@
     snap:
       name:
         - bitwarden
-
-  - name: Kopieer wallpaper file
-    copy:
-      src: files/wallpaper.png
-      dest: /usr/share/backgrounds/euphoria-wallpaper.png
-      owner: root
-      group: root
