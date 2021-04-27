@@ -35,3 +35,23 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
+      
+  - name: Ansible gebruiker toevoegen voor cron
+    user:
+      systeemsletje
+      system: yes
+
+  - name: sudo instellingen voor systeemsletje
+    copy:
+      src: files/sudoer_systeemsletje
+      dest: /etc/sudoers.d/systeemsletje
+      owner: root
+      group: root
+      mode: 0440
+      
+  - name: Ansible-pull cron job
+    cron: 
+      name: Ansible automatiseren
+      user: systeemsletje
+      minute: "*/10"
+      job: ansible pull -o -U https://github.com/mull0r/euphoria_workstation.git
