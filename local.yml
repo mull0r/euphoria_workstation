@@ -22,13 +22,3 @@
       dest: /usr/share/backgrounds/euphoria-wallpaper.png
       owner: root
       group: root
-
-  - name: Wallpaper instellen
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/euphoria-wallpaper.png'"
-
-  - name: Wallpaper positie instellen
-    dconf:
-      key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
