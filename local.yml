@@ -4,6 +4,12 @@
   become: true
 
   tasks:
-  - name: Installeer htop
+  - name: Installeer meerdere apt
     package:
-      name: htop
+      name:
+        - htop
+
+  - name: Installeer snaps
+    snap:
+      name:
+        - bitwarden
