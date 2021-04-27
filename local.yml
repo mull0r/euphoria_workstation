@@ -8,6 +8,8 @@
     package:
       name:
         - htop
+        - lm-sensors
+        - neofetch
 
   - name: Installeer snaps
     snap:
