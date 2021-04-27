@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: ALL
   connection: local
   become_user: mark
 
