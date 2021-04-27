@@ -38,7 +38,7 @@
       
   - name: Ansible gebruiker toevoegen voor cron
     user:
-      systeemsletje
+      name: systeemsletje
       system: yes
 
   - name: sudo instellingen voor systeemsletje
