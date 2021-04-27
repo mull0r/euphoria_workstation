@@ -27,12 +27,8 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/euphoria-wallpaper.png'"
-      become: yes
-      become_user: root
 
   - name: Wallpaper positie instellen
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
-      become: yes
-      become_user: root
