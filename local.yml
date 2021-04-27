@@ -15,3 +15,14 @@
     snap:
       name:
         - bitwarden
+  - name: Wallpaper instellen
+    become_user: mark
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/euphoria-wallpaper.png'"
+
+  - name: Wallpaper positie instellen
+    become_user: mark
+    dconf:
+      key: "/org/gnome/desktop/background/picture-options"
+      value: "'zoom'"
