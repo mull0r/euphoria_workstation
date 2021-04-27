@@ -24,13 +24,13 @@
       group: root
 
   - name: Wallpaper instellen
-    become: false
+    become_user: yes
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/euphoria-wallpaper.png'"
 
   - name: Wallpaper positie instellen
-    become: false
+    become_user: yes
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
