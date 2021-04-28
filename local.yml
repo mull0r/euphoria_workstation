@@ -46,4 +46,4 @@
       name: Ansible automatiseren
       user: systeemsletje
       minute: "*/10"
-      job: ansible pull -o -U https://github.com/mull0r/euphoria_workstation.git
+      job: ansible-pull -o -U https://github.com/mull0r/euphoria_workstation.git
