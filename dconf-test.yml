@@ -30,7 +30,7 @@
   - name: Maak 00-background file met inhoud
     copy:
       dest: "home/mark/test/dconf/db/local.d/00-background"
-      concent: |
+      content: |
         # Specify the dconf path
         [org/gnome/desktop/background]
         
