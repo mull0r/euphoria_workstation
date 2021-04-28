@@ -12,7 +12,7 @@
       group: root
       mode: '0755'
       
-  - name: Maak profile directory
+  - name: TEST Maak profile directory
     file:
       path: /home/mark/test/dconf/profile
       state: directory
@@ -26,3 +26,20 @@
       content: |
         user-db:user
         system-db:local
+
+  - name: Maak 00-background file met inhoud
+    copy:
+      dest: "home/mark/test/dconf/db/local.d/00-background"
+      concent: |
+        # Specify the dconf path
+        [org/gnome/desktop/background]
+        
+        # Specify the path to the desktop background image file
+        picture-uri='file:///usr/share/backgrounds/euphoria-wallpaper.png'
+        
+#als laatste
+  - name: TEST run command dconf update
+    command: dconf update
+    
+  
+
