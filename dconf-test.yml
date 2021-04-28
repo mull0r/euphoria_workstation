@@ -4,10 +4,17 @@
   become: true
   
   tasks:
-  - name: TEST Maak dconf local.d directory
+  - name: Maak dconf local.d directory
     file:
-      path: /home/mark/test/dconf/db/local.d
+      path: /etc/dconf/db/local.d
       state: directory
       owner: root
       group: root
       mode: '0755'
+  
+  - name: TEST Maak db file
+    copy:
+      dest: "/home/mark/test/dconf/profile/user"
+      content: |
+        user-db:user
+        system-db:local
