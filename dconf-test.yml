@@ -14,7 +14,7 @@
       
   - name: Maak profile directory
     file:
-      path: home/mark/test/dconf/profile
+      path: /home/mark/test/dconf/profile
       state: directory
       owner: root
       group: root
