@@ -14,6 +14,7 @@
         - htop
         - lm-sensors
         - neofetch
+        - gnome-tweaks
 
   - name: Installeer snaps
     snap:
