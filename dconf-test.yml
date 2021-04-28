@@ -14,7 +14,7 @@
       
   - name: TEST Maak profile directory
     file:
-      path: /home/mark/test/dconf/profile
+      path: /etc/dconf/profile
       state: directory
       owner: root
       group: root
@@ -22,14 +22,14 @@
   
   - name: TEST Maak db file
     copy:
-      dest: "/home/mark/test/dconf/profile/user"
+      dest: "/etc/dconf/profile/user"
       content: |
         user-db:user
         system-db:local
 
   - name: Maak 00-background file met inhoud
     copy:
-      dest: "/home/mark/test/dconf/db/local.d/00-background"
+      dest: "/etc/dconf/db/local.d/00-background"
       content: |
         # Specify the dconf path
         [org/gnome/desktop/background]
