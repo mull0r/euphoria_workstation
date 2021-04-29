@@ -2,34 +2,11 @@
 - hosts: localhost
   connection: local
   become: true  
-  pre_tasks:
-    - name: update repositories
-      apt: update_cache=yes
-      changed_when: False
+# Entirely for Ubuntu-based OS  
 
   tasks:
-  - name: Installeer packages
-    package:
-      name:
-        - python3-psutil
-        - curl
-        - git
-        - landscape-client
-        - htop
-        - lm-sensors
-        - neofetch
-        - gnome-tweaks
 
-  - name: Installeer snaps
-    snap:
-      name:
-        - bitwarden
-        
-  - name: Verwijderen ongewenste packages
-    package: 
-      name: 
-        - gnome-initial-setup
-      state: absent
+- include: tasks/packages.yml
 
   - name: Kopieer wallpaper file
     copy:

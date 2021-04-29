@@ -1,0 +1,25 @@
+  - name: Installeer packages
+    package:
+      name:
+        - python3-psutil
+        - curl
+        - git
+        - landscape-client
+        - htop
+        - lm-sensors
+        - neofetch
+        - gnome-tweaks
+        - geary
+      state: latest
+      update_cache: yes
+
+  - name: Installeer snaps
+    snap:
+      name:
+        - bitwarden
+        
+  - name: Verwijderen ongewenste packages
+    package: 
+      name: 
+        - gnome-initial-setup
+      state: absent
