@@ -20,6 +20,12 @@
     snap:
       name:
         - bitwarden
+        
+  - name: Verwijderen ongewenste packages
+    package: 
+      name: 
+        - gnome-initial-setup
+      state: absent
 
   - name: Kopieer wallpaper file
     copy:
