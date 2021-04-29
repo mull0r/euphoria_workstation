@@ -6,7 +6,7 @@
 
   tasks:
 
-- include: tasks/packages.yml
+  - include: tasks/packages.yml
 
   - name: Kopieer wallpaper file
     copy:
