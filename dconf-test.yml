@@ -35,6 +35,12 @@
         color-shading-type='solid'
         picture-options='zoom'
         picture-uri='file:///usr/share/backgrounds/euphoria-wallpaper.png'
+
+  - name: Maak background lock-file met inhoud
+    copy:
+      dest: "/etc/dconf/db/local.d/locks/background"
+      content: |
+        org/gnome/desktop/background/picture-uri
           
 #als laatste
   - name: TEST run command dconf update
