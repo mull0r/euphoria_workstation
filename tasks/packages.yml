@@ -10,6 +10,7 @@
         - neofetch
         - gnome-tweaks
         - geary
+        - timeshift
       state: latest
       update_cache: yes
 
