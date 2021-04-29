@@ -6,7 +6,9 @@
 
   tasks:
 
-  - include: tasks/packages.yml
+  - include: 
+     - tasks/packages.yml
+     - tasks/dconf-initial-setup.yml
 
   - name: Kopieer wallpaper file
     copy:
@@ -27,37 +29,6 @@
       owner: root
       group: root
       mode: 0440
-      
-  - name: Maak dconf local.d directory
-    file:
-      path: /etc/dconf/db/local.d
-      state: directory
-      owner: root
-      group: root
-      mode: '0755'
-      
-  - name: Maak dconf local.d/locks directory
-    file:
-      path: /etc/dconf/db/local.d/locks
-      state: directory
-      owner: root
-      group: root
-      mode: '0755'
-      
-  - name: Maak profile directory
-    file:
-      path: /etc/dconf/profile
-      state: directory
-      owner: root
-      group: root
-      mode: '0755'
-  
-  - name: Maak db file
-    copy:
-      dest: "/etc/dconf/profile/user"
-      content: |
-        user-db:user
-        system-db:local
 
   - name: Maak 00-background file met inhoud
     copy:
