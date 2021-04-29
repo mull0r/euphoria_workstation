@@ -31,15 +31,12 @@
     copy:
       dest: "/etc/dconf/db/local.d/00-background"
       content: |
-        # Specify the dconf path
         [org/gnome/desktop/background]
-        
-        # Specify the path to the desktop background image file
+        color-shading-type='solid'
+        picture-options='zoom'
         picture-uri='file:///usr/share/backgrounds/euphoria-wallpaper.png'
-        
+          
 #als laatste
   - name: TEST run command dconf update
     command: dconf update
     
-  
-
