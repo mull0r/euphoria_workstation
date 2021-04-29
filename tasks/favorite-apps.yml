@@ -1,4 +1,4 @@
-    - name: Create 00-favorite-apps file with content
+  - name: Create 00-favorite-apps file with content
     copy:
       dest: "/etc/dconf/db/local.d/00-favorite-apps"
       content: |
