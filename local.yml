@@ -6,7 +6,8 @@
 
   tasks:
 
-  - include: 
+  - name: meerdere taken
+    include_tasks: 
      - tasks/packages.yml
      - tasks/dconf-initial-setup.yml
 
