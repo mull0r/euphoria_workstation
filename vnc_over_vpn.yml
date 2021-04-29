@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  
+  tasks:
+  - name: ALLOW VNC vanaf alle netwerken en over vpn
+    command: gsettings reset org.gnome.Vino network-interface
