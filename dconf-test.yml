@@ -20,6 +20,14 @@
       group: root
       mode: '0755'
       
+  - name: Maak dconf site.d/locks directory
+    file:
+      path: /etc/dconf/db/site.d/locks
+      state: directory
+      owner: root
+      group: root
+      mode: '0755'
+      
   - name: TEST Maak profile directory
     file:
       path: /etc/dconf/profile
