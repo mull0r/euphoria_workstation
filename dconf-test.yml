@@ -12,17 +12,17 @@
       group: root
       mode: '0755'
   
-  - name: Maak dconf site.d directory
+  - name: Maak dconf local.d directory
     file:
-      path: /etc/dconf/db/site.d
+      path: /etc/dconf/db/local.d
       state: directory
       owner: root
       group: root
       mode: '0755'
       
-  - name: Maak dconf site.d/locks directory
+  - name: Maak dconf local.d/locks directory
     file:
-      path: /etc/dconf/db/site.d/locks
+      path: /etc/dconf/db/local.d/locks
       state: directory
       owner: root
       group: root
@@ -46,7 +46,7 @@
 
   - name: Maak 00-background file met inhoud
     copy:
-      dest: "/etc/dconf/db/site.d/00-background"
+      dest: "/etc/dconf/db/local.d/00-background"
       content: |
         [org/gnome/desktop/background]
         color-shading-type='solid'
@@ -55,9 +55,9 @@
 
   - name: Maak background lock-file met inhoud
     copy:
-      dest: "/etc/dconf/db/site.d/locks/background"
+      dest: "/etc/dconf/db/local.d/locks/00-background"
       content: |
-        org/gnome/desktop/background/picture-uri
+        /org/gnome/desktop/background/picture-uri
           
 #als laatste
   - name: TEST run command dconf update
