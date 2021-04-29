@@ -5,11 +5,9 @@
 # Entirely for Ubuntu-based OS  
 
   tasks:
-
-  - name: meerdere taken
-    include_tasks: 
-     - tasks/packages.yml
-     - tasks/dconf-initial-setup.yml
+  
+  - include: tasks/packages.yml
+  - include: tasks/dconf-initial-setup.yml
 
   - name: Kopieer wallpaper file
     copy:
