@@ -1,0 +1,13 @@
+    - name: Create 00-favorite-apps file with content
+    copy:
+      dest: "/etc/dconf/db/local.d/00-favorite-apps"
+      content: |
+        [org/gnome/shell]
+        favorite-apps = ['org.gnome.Nautilus.desktop', 'firefox.desktop', 'geary.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'bitwarden_bitwarden.desktop','gnome-control-center.desktop']
+
+
+  - name: Maak favorite-apps lock-file met inhoud
+    copy:
+      dest: "/etc/dconf/db/local.d/locks/00-favorite-apps"
+      content: |
+        /org/gnome/shell/favorite-apps

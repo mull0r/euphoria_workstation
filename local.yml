@@ -9,6 +9,7 @@
   - include: tasks/packages.yml
   - include: tasks/dconf-initial-setup.yml
   - include: tasks/set-wallpaper.yml
+  - include: tasks/favorite-apps.yml
             
   - name: Add Ansible user for cron
     user:
