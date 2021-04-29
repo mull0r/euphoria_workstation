@@ -1,7 +1,11 @@
 ---
 - hosts: localhost
   connection: local
-  become: true
+  become: true  
+  pre_tasks:
+    - name: update repositories
+      apt: update_cache=yes
+      changed_when: False
 
   tasks:
   - name: Installeer packages
@@ -63,7 +67,7 @@
       group: root
       mode: '0755'
       
-  - name: TEST Maak profile directory
+  - name: Maak profile directory
     file:
       path: /etc/dconf/profile
       state: directory
@@ -71,7 +75,7 @@
       group: root
       mode: '0755'
   
-  - name: TEST Maak db file
+  - name: Maak db file
     copy:
       dest: "/etc/dconf/profile/user"
       content: |
@@ -92,6 +96,10 @@
       dest: "/etc/dconf/db/local.d/locks/00-background"
       content: |
         /org/gnome/desktop/background/picture-uri
+        
+#als laatste
+  - name: Run command dconf update
+    command: dconf update
 
 # Naam van de cronjob NIET veranderen      
   - name: Ansible-pull cron job
