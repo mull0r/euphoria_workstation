@@ -11,6 +11,14 @@
       owner: root
       group: root
       mode: '0755'
+  
+  - name: Maak dconf site.d directory
+    file:
+      path: /etc/dconf/db/site.d
+      state: directory
+      owner: root
+      group: root
+      mode: '0755'
       
   - name: TEST Maak profile directory
     file:
@@ -26,10 +34,11 @@
       content: |
         user-db:user
         system-db:local
+        system-db:site
 
   - name: Maak 00-background file met inhoud
     copy:
-      dest: "/etc/dconf/db/local.d/00-background"
+      dest: "/etc/dconf/db/site.d/00-background"
       content: |
         [org/gnome/desktop/background]
         color-shading-type='solid'
@@ -38,7 +47,7 @@
 
   - name: Maak background lock-file met inhoud
     copy:
-      dest: "/etc/dconf/db/local.d/locks/background"
+      dest: "/etc/dconf/db/site.d/locks/background"
       content: |
         org/gnome/desktop/background/picture-uri
           
