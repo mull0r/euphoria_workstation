@@ -8,41 +8,20 @@
   
   - include: tasks/packages.yml
   - include: tasks/dconf-initial-setup.yml
-
-  - name: Kopieer wallpaper file
-    copy:
-      src: files/wallpaper.png
-      dest: /usr/share/backgrounds/euphoria-wallpaper.png
-      owner: root
-      group: root
+  - include: tasks/set-wallpaper.yml
             
-  - name: Ansible gebruiker toevoegen voor cron
+  - name: Add Ansible user for cron
     user:
       name: systeemsletje
       system: yes
 
-  - name: sudo instellingen voor systeemsletje
+  - name: sudo set for systeemsletje
     copy:
       src: files/sudoer_systeemsletje
       dest: /etc/sudoers.d/systeemsletje
       owner: root
       group: root
       mode: 0440
-
-  - name: Maak 00-background file met inhoud
-    copy:
-      dest: "/etc/dconf/db/local.d/00-background"
-      content: |
-        [org/gnome/desktop/background]
-        color-shading-type='solid'
-        picture-options='zoom'
-        picture-uri='file:///usr/share/backgrounds/euphoria-wallpaper.png'
-
-  - name: Maak background lock-file met inhoud
-    copy:
-      dest: "/etc/dconf/db/local.d/locks/00-background"
-      content: |
-        /org/gnome/desktop/background/picture-uri
         
 #als laatste
   - name: Run command dconf update
