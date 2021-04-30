@@ -3,7 +3,7 @@
       dest: "/etc/dconf/db/local.d/00-general-settings"
       content: |
         [org/gnome/desktop/peripherals/mouse]
-        natural-scroll = TRUE
+        natural-scroll = true
 
   - name: Maak favorite-apps lock-file met inhoud
     copy:
