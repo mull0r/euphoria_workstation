@@ -11,6 +11,7 @@
         - gnome-tweaks
         - geary
         - timeshift
+        - gimp
       state: latest
       update_cache: yes
 
