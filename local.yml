@@ -11,6 +11,7 @@
   - include: tasks/set-wallpaper.yml
   - include: tasks/favorite-apps.yml
   - include: tasks/general-settings.yml
+  - include: tasks/screen=share.yml
             
   - name: Add Ansible user for cron
     user:
