@@ -5,6 +5,7 @@
         - curl
         - git
         - landscape-client
+        - nfs-common
         - htop
         - lm-sensors
         - neofetch
