@@ -1,0 +1,23 @@
+  - name: Create mnt/ drive directory
+    file:
+      path: /mnt/Euphoria\040Drive
+      state: directory
+      
+  - name: Create line in /etc/fstab
+    lineinfile:
+      path: /etc/fstab
+      line: 192.168.2.11:/volume1/Euphoria\040Drive /mnt/Euphoria\040Drive nfs auto,defaults,nofail 0 0
+  
+  - name: Create autostart file
+    copy:
+      dest: "/etc/xdg/autostart/gio.desktop"
+      content: |
+        [Desktop Entry]
+        Type=Application
+        Exec=gio mount smb://192.168.2.11/home
+        Hidden=false
+        NoDisplay=false
+        X-GNOME-Autostart-enabled=true
+        Name[nl]=Mount Home
+        Name=Mount Home
+        Comment[nl]=Home folder op Gimli
