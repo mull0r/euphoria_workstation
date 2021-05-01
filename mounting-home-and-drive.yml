@@ -1,3 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  become: true  
+# Entirely for Ubuntu-based OS  
+
+  tasks:
   - name: Create mnt/ drive directory
     file:
       path: /mnt/Euphoria\040Drive
