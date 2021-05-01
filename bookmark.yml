@@ -17,5 +17,5 @@
       
   - name: Create line in ~/.config/gtk-3.0/bookmarks
     lineinfile:
-      path: /home/{{ user[6] }}/.config/gtk-3.0/bookmarks
+      path: /home/{{ user[5] }}/.config/gtk-3.0/bookmarks
       line: file:///mnt/Euphoria%20Drive
