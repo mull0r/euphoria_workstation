@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  become: true  
+  
+  - file:
+    path: "{{home}}/Euphoria Drive"
+    state: directory
+  become: true
+  become_method: sudo
+  become_user: "{{account}}"
+
