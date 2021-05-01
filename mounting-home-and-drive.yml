@@ -7,7 +7,7 @@
   tasks:
   - name: Create mnt/ drive directory
     file:
-      path: /mnt/Euphoria\040Drive
+      path: /mnt/Euphoria Drive
       state: directory
       
   - name: Create line in /etc/fstab
