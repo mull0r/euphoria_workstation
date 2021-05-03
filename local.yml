@@ -32,3 +32,7 @@
       user: systeemsletje
       minute: "*/10"
       job: ansible-pull -o -U https://github.com/mull0r/euphoria_workstation.git
+      
+  handlers: 
+  - name: dconf update
+    command: dconf update
