@@ -6,7 +6,7 @@
         natural-scroll = true
     notify: dconf update
 
-  - name: Maak favorite-apps lock-file met inhoud
+  - name: Maak general-settings lock-file met inhoud
     copy:
       dest: "/etc/dconf/db/local.d/locks/00-general-settings"
       content: |
