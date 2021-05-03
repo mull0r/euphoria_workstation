@@ -4,9 +4,11 @@
       content: |
         [org/gnome/settings-daemon/plugins/sharing]
         active = true
+    register: dconf
+        
   - name: Maak favorite-apps lock-file met inhoud
     copy:
       dest: "/etc/dconf/db/local.d/locks/00-screen-share"
       content: |
         /org/gnome/settings-daemon/plugins/sharing/active
-        
+    register: dconf

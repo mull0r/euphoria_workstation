@@ -28,6 +28,7 @@
 #als laatste
   - name: Run command dconf update
     command: dconf update
+    when: dconf.changed
 
 # Naam van de cronjob NIET veranderen      
   - name: Ansible-pull cron job

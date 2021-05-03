@@ -4,9 +4,11 @@
       content: |
         [org/gnome/desktop/peripherals/mouse]
         natural-scroll = true
+    register: dconf
 
   - name: Maak favorite-apps lock-file met inhoud
     copy:
       dest: "/etc/dconf/db/local.d/locks/00-general-settings"
       content: |
         /org/gnome/desktop/peripherals/mouse/natural-scroll
+    register: dconf

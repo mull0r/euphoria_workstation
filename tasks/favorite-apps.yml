@@ -4,6 +4,7 @@
       content: |
         [org/gnome/shell]
         favorite-apps = ['org.gnome.Nautilus.desktop', 'firefox.desktop', 'geary.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'bitwarden_bitwarden.desktop','gnome-control-center.desktop']
+    register: dconf
 
 
   - name: Maak favorite-apps lock-file met inhoud
@@ -11,3 +12,4 @@
       dest: "/etc/dconf/db/local.d/locks/00-favorite-apps"
       content: |
         /org/gnome/shell/favorite-apps
+    register: dconf
