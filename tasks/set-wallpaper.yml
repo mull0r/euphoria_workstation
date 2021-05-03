@@ -11,7 +11,7 @@
       content: |
         [org/gnome/desktop/background]
         color-shading-type='solid'
-        picture-options='zoom'
+        picture-options='scaled'
         picture-uri='file:///usr/share/backgrounds/euphoria-wallpaper.png'
     register: dconf
 
