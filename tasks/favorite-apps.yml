@@ -3,7 +3,7 @@
       dest: "/etc/dconf/db/local.d/00-favorite-apps"
       content: |
         [org/gnome/shell]
-        favorite-apps = ['org.gnome.Nautilus.desktop', 'firefox.desktop', 'geary.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'bitwarden_bitwarden.desktop','gnome-control-center.desktop']
+        favorite-apps = ['org.gnome.Nautilus.desktop', 'firefox.desktop', 'geary.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'bitwarden_bitwarden.desktop', 'org.gimp.GIMP.desktop', 'gnome-control-center.desktop']
     notify: dconf update
 
 
