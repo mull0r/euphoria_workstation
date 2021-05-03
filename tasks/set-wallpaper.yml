@@ -22,3 +22,8 @@
         /org/gnome/desktop/background/picture-uri
         /org/gnome/desktop/background/picture-options
     register: dconf
+    
+    #als laatste
+  - name: Run command dconf update
+    command: dconf update
+    when: dconf.changed

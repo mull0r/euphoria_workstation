@@ -12,3 +12,8 @@
       content: |
         /org/gnome/settings-daemon/plugins/sharing/active
     register: dconf
+    
+    #als laatste
+  - name: Run command dconf update
+    command: dconf update
+    when: dconf.changed
