@@ -12,6 +12,11 @@
   - include: tasks/favorite-apps.yml
   - include: tasks/general-settings.yml
   - include: tasks/mounting-home-and-drive.yml
+  
+  - name: Copy fonts to system wide
+    copy:
+      src: files/fonts/
+      dest: /usr/local/share/fonts
             
   - name: Add Ansible user for cron
     user:
