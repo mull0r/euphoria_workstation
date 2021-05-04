@@ -1,0 +1,85 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  vars:
+    user:
+      - mark
+      - marijkehuisman
+      - fardau
+      - desireerooks
+      - myneketermaat
+      - henniedijkstra
+  
+  tasks:
+# User[0]
+  - name: Check if folder in [0] exists
+    stat:
+      path: /home/{{ user[0]}}/.config/gtk-3.0/bookmarks
+    register: folder0
+
+  - name: Create line in [0]~/.config/gtk-3.0/bookmarks
+    lineinfile:
+      path: /home/{{ user[0] }}/.config/gtk-3.0/bookmarks
+      line: file:///mnt/Euphoria%20Drive
+    when: folder0.stat.exists
+    
+# User[1]
+  - name: Check if folder in [1] exists
+    stat:
+      path: /home/{{ user[1]}}/.config/gtk-3.0/bookmarks
+    register: folder1
+
+  - name: Create line in [1]~/.config/gtk-3.0/bookmarks
+    lineinfile:
+      path: /home/{{ user[1] }}/.config/gtk-3.0/bookmarks
+      line: file:///mnt/Euphoria%20Drive
+    when: folder1.stat.exists
+    
+# User[2]
+  - name: Check if folder in [2] exists
+    stat:
+      path: /home/{{ user[2]}}/.config/gtk-3.0/bookmarks
+    register: folder2
+
+  - name: Create line in [2]~/.config/gtk-3.0/bookmarks
+    lineinfile:
+      path: /home/{{ user[2] }}/.config/gtk-3.0/bookmarks
+      line: file:///mnt/Euphoria%20Drive
+    when: folder2.stat.exists
+
+# User[3]   
+  - name: Check if folder in [3] exists
+    stat:
+      path: /home/{{ user[3]}}/.config/gtk-3.0/bookmarks
+    register: folder3
+
+  - name: Create line in [3]~/.config/gtk-3.0/bookmarks
+    lineinfile:
+      path: /home/{{ user[3] }}/.config/gtk-3.0/bookmarks
+      line: file:///mnt/Euphoria%20Drive
+    when: folder3.stat.exists
+    
+# User[4]   
+  - name: Check if folder in [4] exists
+    stat:
+      path: /home/{{ user[4]}}/.config/gtk-3.0/bookmarks
+    register: folder4
+
+  - name: Create line in [4]~/.config/gtk-3.0/bookmarks
+    lineinfile:
+      path: /home/{{ user[4] }}/.config/gtk-3.0/bookmarks
+      line: file:///mnt/Euphoria%20Drive
+    when: folder4.stat.exists
+    
+# User[5]
+  - name: Check if folder in [5] exists
+    stat:
+      path: /home/{{ user[5]}}/.config/gtk-3.0/bookmarks
+    register: folder5
+
+  - name: Create line in [5]~/.config/gtk-3.0/bookmarks
+    lineinfile:
+      path: /home/{{ user[5] }}/.config/gtk-3.0/bookmarks
+      line: file:///mnt/Euphoria%20Drive
+    when: folder5.stat.exists
