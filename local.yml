@@ -2,6 +2,15 @@
 - hosts: localhost
   connection: local
   become: true
+  vars:
+    user:
+      - mark
+      - marijkehuisman
+      - fardau
+      - desireerooks
+      - myneketermaat
+      - henniedijkstra
+  
 # Entirely for Ubuntu-based OS  
 
   tasks:
