@@ -1,0 +1,11 @@
+  - name: Create wiki-app
+    copy:
+      dest: "/usr/share/applications/euphoria-wiki.desktop"
+      content: |
+        [Desktop Entry]
+        Encoding=UTF-8
+        Name=Euphoria Wiki
+        Type=Link
+        URL=http://wiki.euphoria-erotiek.nl
+        Icon=text-html
+
