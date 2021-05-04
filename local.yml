@@ -17,7 +17,6 @@
   
   - include: tasks/packages.yml
   - include: tasks/dconf-initial-setup.yml
-  - include: tasks/wiki-app.yml
   - include: tasks/set-wallpaper.yml
   - include: tasks/favorite-apps.yml
   - include: tasks/general-settings.yml
