@@ -13,6 +13,7 @@
         - geary
         - timeshift
         - gimp
+        - printer-driver-dymo
       state: latest
       update_cache: yes
 
