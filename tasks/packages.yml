@@ -1,9 +1,9 @@
   - name: Installeer packages
     package:
       name:
+        - git 
         - python3-psutil
         - curl
-        - git
         - landscape-client
         - nfs-common
         - htop
