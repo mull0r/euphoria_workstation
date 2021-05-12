@@ -2,14 +2,14 @@
 - hosts: localhost
   connection: local
   become: true
-  vars:
-    user:
-      - mark
-      - marijkehuisman
-      - fardau
-      - desireerooks
-      - myneketermaat
-      - henniedijkstra
+#  vars:
+#    user:
+#      - mark
+#   - marijkehuisman
+#      - fardau
+#      - desireerooks
+#      - myneketermaat
+#      - henniedijkstra
   
 # Entirely for Ubuntu-based OS  
 
@@ -21,7 +21,7 @@
   - include: tasks/favorite-apps.yml
   - include: tasks/general-settings.yml
   - include: tasks/mounting-home-and-drive.yml
-  - include: tasks/bookmarks.yml
+#  - include: tasks/bookmarks.yml
   
   - name: Copy fonts to system wide
     copy:
