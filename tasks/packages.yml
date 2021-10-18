@@ -26,4 +26,5 @@
     package: 
       name: 
         - gnome-initial-setup
+        - teamviewer
       state: absent
