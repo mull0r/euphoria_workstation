@@ -15,6 +15,7 @@
         - gimp
         - inkscape
         - scribus
+        - kdenlive
         - printer-driver-dymo
       state: latest
       update_cache: yes
