@@ -15,7 +15,6 @@
         - gimp
         - inkscape
         - scribus
-        - kdenlive
         - printer-driver-dymo
       state: latest
       update_cache: yes
@@ -24,10 +23,12 @@
     snap:
       name:
         - bitwarden
+        - kdenlive
         
   - name: Verwijderen ongewenste packages
     package: 
       name: 
         - gnome-initial-setup
         - teamviewer-host
+        - kdenlive
       state: absent
