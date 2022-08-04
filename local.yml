@@ -5,15 +5,14 @@
   vars:
     user:
       - mark
-      - marijkehuisman
       - fardau
       - desireerooks
       - myneketermaat
       - henniedijkstra
-      - talysakatoele
+      - laurajansen
   
 # Entirely for Ubuntu-based OS
-# Updated: 2022-05-31 - 15:04
+# Updated: 2022-08-04 - 13:53
 
   tasks:
   
