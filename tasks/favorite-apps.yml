@@ -3,7 +3,7 @@
       dest: "/etc/dconf/db/local.d/00-favorite-apps"
       content: |
         [org/gnome/shell]
-        favorite-apps = ['org.gnome.Nautilus.desktop', 'firefox_firefox.desktop', 'firefox.desktop', 'geary.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'gimp.desktop', 'bitwarden_bitwarden.desktop', 'gnome-control-center.desktop']
+        favorite-apps = ['org.gnome.Nautilus.desktop', 'firefox_firefox.desktop', 'firefox.desktop', 'geary.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'gimp.desktop', 'bitwarden_bitwarden.desktop', 'inkscape.desktop', 'gnome-control-center.desktop']
     notify: dconf update
   
   - name: Verwijder lockfile favorite-apps
