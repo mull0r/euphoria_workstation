@@ -12,7 +12,7 @@
       - laurajansen
   
 # Entirely for Ubuntu-based OS
-# Updated: 2022-09-01 - 16:28
+# Updated: 2022-09-01 - 16:35
 
   tasks:
   
@@ -52,4 +52,7 @@
       
   handlers: 
   - name: dconf update
-    command: sudo dconf update
+    command: dconf update
+    become: yes
+    become_method: su
+    become_user: systeemsletje
