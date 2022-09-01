@@ -12,7 +12,7 @@
       - laurajansen
   
 # Entirely for Ubuntu-based OS
-# Updated: 2022-09-01 - 16:35
+# Updated: 2022-09-01 - 16:39
 
   tasks:
   
@@ -54,5 +54,4 @@
   - name: dconf update
     command: dconf update
     become: yes
-    become_method: su
     become_user: systeemsletje
