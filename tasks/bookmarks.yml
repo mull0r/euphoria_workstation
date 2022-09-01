@@ -71,13 +71,13 @@
     when: folder5.stat.exists
 
 # User[6]
-  - name: Check if folder in [6] exists
-    stat:
-      path: /home/{{ user[6]}}/.config/gtk-3.0/bookmarks
-    register: folder5
-
-  - name: Create line in [6]~/.config/gtk-3.0/bookmarks
-    lineinfile:
-      path: /home/{{ user[6] }}/.config/gtk-3.0/bookmarks
-      line: file:///mnt/Euphoria%20Drive
-    when: folder6.stat.exists
+#  - name: Check if folder in [6] exists
+#    stat:
+#      path: /home/{{ user[6]}}/.config/gtk-3.0/bookmarks
+#    register: folder5
+#
+#  - name: Create line in [6]~/.config/gtk-3.0/bookmarks
+#    lineinfile:
+#      path: /home/{{ user[6] }}/.config/gtk-3.0/bookmarks
+#      line: file:///mnt/Euphoria%20Drive
+#    when: folder6.stat.exists
